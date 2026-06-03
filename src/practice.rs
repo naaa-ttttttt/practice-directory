@@ -12,3 +12,7 @@ pub fn log_parser(values: Vec<String>) -> HashMap<String, Vec<String>> {
     }
     map   
 }
+
+fn sum_two(num: Vec<i32>, target: i32) -> i32 {
+
+}
