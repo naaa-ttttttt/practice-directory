@@ -13,6 +13,7 @@ pub fn log_parser(values: Vec<String>) -> HashMap<String, Vec<String>> {
     map   
 }
 
-fn sum_two(num: Vec<i32>, target: i32) -> i32 {
-
+fn sum_two(num: Vec<i32>, target: i32) -> bool {
+    let left = num[0];
+    let right = num.len() -1;
 }
