@@ -1,26 +1,19 @@
-pub struct Solution;
-
-impl Solution {
-    pub fn sum_two(num: Vec<i32>, target: i32) -> bool {
-        let mut left = num[0];
-        let mut right = num.len() -1;
-        let mut current_sum = 0;
-
-        for sum in num.iter() {
-            if (left + right) as i32 == target {
-                true;
-            } else {
-                false;
-            }
-
-            current_sum = sum;
-
-            if current_sum == sum {
-                true;
-            } else {
-                false;
-            }
+fn two_sum(nums: &[i32], target: i32) -> bool {
+    let mut left = 0;
+    let mut right = nums.len() - 1;
+    
+    while left < right {
+        let current_sum = nums[left] + nums[right];
+        if current_sum == target {
+            return true;
         }
-
+        if current_sum < target {
+            left += 1;
+        } else {
+            right -= 1;
+        }
     }
+    
+    false
 }
+
