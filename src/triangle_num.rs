@@ -6,6 +6,10 @@ fn triangle_num(mut num: Vec<i32>) -> i32 {
     for i in (0..length).rev() {
         let left = 0;
         let right = i - 1;
+
+        while left < right {
+
+        }
         
     }
 
