@@ -1,3 +1,3 @@
-fn move_zeroes(arr: Vec<i32>) -> Vec<i32>{
+fn move_zeroes(arr: &mut Vec<i32>) {
 
 }
