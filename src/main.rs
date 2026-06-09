@@ -1,4 +1,4 @@
-mod Two_pointers;
+mod two_pointers;
 
 fn main() {
     println!("Successful");
