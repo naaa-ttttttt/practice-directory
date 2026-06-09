@@ -5,6 +5,10 @@ fn sort_colors(num: &mut Vec<i32>) {
     let mut i = 0;
 
     while i <= right {
+        if num[i] == 0 {
+            num.swap(i, left);
+            left += 1;
+        } 
 
     }
     
