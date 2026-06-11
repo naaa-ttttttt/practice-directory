@@ -5,6 +5,13 @@ fn trapping_water(heights: Vec<i32>) -> i32 {
     let mut right = length - 1;
     let mut left_max = 0;
     let mut right_max = 0;
+    
+    while left < right {
+        left_max = std::cmp::max(left_max, heights[left]);
+        right_max = std::cmp::max(right_max, heights[right]);
+
+       
+    }
 
 
 
