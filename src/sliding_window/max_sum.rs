@@ -1,4 +1,4 @@
-fn max_of_subarray(nums: Vec<i32>, k: i32) -> i32 {
+pub fn max_of_subarray(nums: Vec<i32>, k: i32) -> i32 {
     let k = k as usize;
     let mut left = 0;
     let mut window_sum = 0;
@@ -9,7 +9,7 @@ fn max_of_subarray(nums: Vec<i32>, k: i32) -> i32 {
         window_sum += nums[right_ptr];
 
         if (right_ptr - left) + 1 == k {
-            max_sum.max(window_sum);
+            max_sum = max_sum.max(window_sum);
             
             window_sum -= nums[left];
 
