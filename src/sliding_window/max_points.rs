@@ -10,7 +10,17 @@ pub fn max_points(cards: Vec<i32>, k: i32) -> i32 {
         window_sum += cards[i];
     }
     
-    let max_sum = max_sum.max(window_sum);
+    max_sum = max_sum.max(window_sum);
+
+    for i in 0..k {
+        window_sum -= cards[left];
+        left += 1;
+
+        window_sum += cards[right];
+        right -= 1;
+
+        max_sum = max_sum.max(window_sum);
+    }
 
 
     0
