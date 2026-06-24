@@ -14,6 +14,14 @@ pub fn max_sum(nums: Vec<i32>, k: i32) -> i32 {
             if freq_map.len() == k as usize {
                 max_sum = max_sum.max(window_sum);
             }
+
+            window_sum -= nums[left] as i32;
+            *freq_map.get_mut(&nums[elements]).unwrap() -= 1;
+            if freq_map[&nums[left]] == 0 {
+                freq_map.remove(&nums[left]);
+            }
+
+            left += 1;
         }
     }       
     
