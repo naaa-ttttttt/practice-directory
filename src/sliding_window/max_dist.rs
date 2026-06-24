@@ -9,7 +9,13 @@ pub fn max_sum(nums: Vec<i32>, k: i32) -> i32 {
     for elements in 0..nums.len() as usize {
         window_sum += nums[elements];
         freq_map.entry(nums[elements]).or_insert(0);
-    }
+
+        if elements - left == k as usize {
+            if freq_map.len() == k as usize {
+                max_sum = max_sum.max(window_sum);
+            }
+        }
+    }       
     
     0
 }
