@@ -1,3 +1,3 @@
-pub fn longest_substring(words: Vec<&str>) -> i32 {
+pub fn longest_substring(words: String) -> i32 {
     0
 }
