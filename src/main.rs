@@ -1,9 +1,9 @@
 //mod two_pointers;
-use crate::sliding_window::max_dist::max_sum;
+use crate::sliding_window::variable_window::longest_substring;
 mod sliding_window;
 
 fn main() {
-    println!("{:?}", max_sum(vec![5, 1, 8, 3, 2, 9, 4], 3));
+    println!("{:?}", longest_substring(vec!["nathaniel"]));
     
     println!("Successful");
 }
