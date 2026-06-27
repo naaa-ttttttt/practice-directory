@@ -13,7 +13,7 @@ pub fn longest_substring(s: String) -> i32 {
     // and if the.
     for chars in 0..words.len() {
         let cha = words[chars];
-        *freq_map.entry(&words[chars]).or_insert(0) += 1;
+        *freq_map.entry(cha).or_insert(0) += 1;
         
         // here we are to check the count of the characters, 
         // and if any characters count is more than one,
@@ -21,12 +21,12 @@ pub fn longest_substring(s: String) -> i32 {
         // check then move the left pointer forward, 
         // rerun the code, i guess.
 
-        while 
-        if *freq_map.get(&chars).unwrap() > 1 {
-            words
-            freq_map.remove(&words[left]);
+        while freq_map[&cha] > 1 { 
+            let cha_left = words[left];
+            *freq_map.get_mut(&cha_left).unwrap() -=  1; 
+            left += 1;
         }  
-        
+        longest_substring = longest_substring.max(chars- left + 1);   
     }
-    0
+    longest_substring as i32
 }
