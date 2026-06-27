@@ -1,9 +1,9 @@
 //mod two_pointers;
-use crate::sliding_window::variable_window::longest_substring;
+use crate::sliding_window::char_replacement::character_replacement;
 mod sliding_window;
 
 fn main() {
-    println!("{:?}", longest_substring(String::from("nathaniel")));
+    println!("{:?}", character_replacement(String::from("eghghgg"), 2));
     
     println!("Successful");
 }
