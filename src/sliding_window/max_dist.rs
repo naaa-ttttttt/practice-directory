@@ -14,6 +14,13 @@ pub fn max_sum(nums: Vec<i32>, k: i32) -> i64 {
             if freq_map.len() == k as usize {
                 max_sum = max_sum.max(window_sum);
             }
+            // so the first condition checks if window size is equal to the target,
+            // second condition checks if every element in the hashmap is different,
+            // if it satisfies both conditions, max sum is updated, else, the code 
+            // below removes the element at the left part of the sliding window, it 
+            // then gets the key value from the hashmap and so since it has been reduced 
+            // from the sliding window, its count on the hashmap is been reduced, and if
+            // its count is equal to 0, then we remove the element off the hashmap.
 
             window_sum -= nums[left] as i64;
             *freq_map.get_mut(&nums[left]).unwrap() -= 1;
