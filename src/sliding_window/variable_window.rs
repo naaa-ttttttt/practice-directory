@@ -14,12 +14,6 @@ pub fn longest_substring(s: String) -> i32 {
     for chars in 0..words.len() {
         let cha = words[chars];
         *freq_map.entry(cha).or_insert(0) += 1;
-        
-        // here we are to check the count of the characters, 
-        // and if any characters count is more than one,
-        // we remove the element from the left, and then 
-        // check then move the left pointer forward, 
-        // rerun the code, i guess.
 
         while freq_map[&cha] > 1 { 
             let cha_left = words[left];
@@ -30,3 +24,11 @@ pub fn longest_substring(s: String) -> i32 {
     }
     longest_substring as i32
 }
+
+        // here we are to check the count of the characters, 
+        // and if any characters count is more than one,
+        // we remove the element from the left, and then 
+        // check then move the left pointer forward, 
+        // rerun the code, i guess.
+
+
