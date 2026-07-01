@@ -16,8 +16,10 @@ pub fn character_replacement(s: String, k: i32) -> i32 {
         *count += 1;
         max_freq = max_freq.max(*count);
 
-        while (end - start) as i32 - max_freq < k {
+        while (end - start) as i32 - max_freq > k {
             let left_char = string[start];
+            *freq_map.get_mut(&left_char).unwrap() -= 1;
+            start += 1;
         }
     } 
     0
