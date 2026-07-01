@@ -21,6 +21,7 @@ pub fn character_replacement(s: String, k: i32) -> i32 {
             *freq_map.get_mut(&left_char).unwrap() -= 1;
             start += 1;
         }
+        max_substring = max_substring.max(end - start + 1);
     } 
-    0
+    max_substring as i32
 }
