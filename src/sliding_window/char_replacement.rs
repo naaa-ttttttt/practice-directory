@@ -16,7 +16,9 @@ pub fn character_replacement(s: String, k: i32) -> i32 {
         *count += 1;
         max_freq = max_freq.max(*count);
 
-        //if freq_map[&end_value]   
+        while (end - start) as i32 - max_freq < k {
+            let left_char = string[start];
+        }
     } 
     0
 }
