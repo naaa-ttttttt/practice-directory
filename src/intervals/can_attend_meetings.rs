@@ -8,6 +8,6 @@ pub fn can_attend_meetings(mut intervals: Vec<Vec<i32>>) -> bool {
     if intervals.is_empty() {
         return true;
     }
-    intervals.sort_by(|a, b| a[0].cmp(&b[0]));
+    let sorted_intervals = intervals.sort_by(|a, b| a[0].cmp(&b[0]));
     true
 }
