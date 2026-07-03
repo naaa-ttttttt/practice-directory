@@ -5,8 +5,8 @@ mod intervals;
 fn main() {
     println!("{:?}", can_attend_meetings(vec![
         vec![1, 5], 
-        vec![6, 8], 
-        vec![3, 9]]
+        vec![3, 8], 
+        vec![6, 9]]
         ));
     
     println!("Successful");
