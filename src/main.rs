@@ -1,13 +1,15 @@
 //mod two_pointers;
-use crate::intervals::can_attend_meetings::can_attend_meetings;
+use crate::intervals::insert_intervals::insert;
 mod intervals;
 
 fn main() {
-    println!("{:?}", can_attend_meetings(vec![
-        vec![1, 5], 
-        vec![3, 8], 
-        vec![6, 9]]
-        ));
+    println!("{:?}", insert(vec![
+        vec![1, 2], 
+        vec![3, 5], 
+        vec![6, 9],
+        vec![8, 10]]
+        , vec![3, 5])
+        );
     
     println!("Successful");
 }
