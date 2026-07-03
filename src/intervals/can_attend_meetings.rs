@@ -5,9 +5,15 @@ pub fn can_attend_meetings(mut intervals: Vec<Vec<i32>>) -> bool {
     // we loop through the array,
     // if the end time in the first array is less than the start time in the 
     // next array, return false.
-    if intervals.is_empty() {
+    if intervals.len() <= 1 {
         return true;
     }
-    let sorted_intervals = intervals.sort_by(|a, b| a[0].cmp(&b[0]));
+    intervals.sort_by(|a, b| a[0].cmp(&b[0]));
+    
+    for i in 1..intervals.len() {
+        if intervals[i][0] < intervals[i - 1][1] {
+            return false;
+        } 
+    }
     true
 }
