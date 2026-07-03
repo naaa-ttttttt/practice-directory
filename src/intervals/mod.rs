@@ -1,1 +1,1 @@
-pub mod can_attend_meetings;
+pub mod insert_intervals;
