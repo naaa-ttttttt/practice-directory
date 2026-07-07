@@ -1,5 +1,7 @@
 pub fn insert(mut intervals: Vec<Vec<i32>>, new_intervals: Vec<i32>) -> Vec<Vec<i32>> {
     let mut  meetings: Vec<Vec<i32>> = Vec::new();
+    let mut i = 0;
+    let len = intervals.len();
 
     intervals.sort_by(|a, b| a[0].cmp(&b[0]));
 
