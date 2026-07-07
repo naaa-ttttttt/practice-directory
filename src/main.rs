@@ -4,11 +4,9 @@ mod intervals;
 
 fn main() {
     println!("{:?}", insert(vec![
-        vec![1, 2], 
-        vec![3, 5], 
+        vec![1, 3], 
         vec![6, 9],
-        vec![8, 10]]
-        , vec![3, 5])
+        ], vec![2, 5])
         );
     
     println!("Successful");
