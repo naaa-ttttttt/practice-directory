@@ -15,7 +15,11 @@ pub fn insert(mut intervals: Vec<Vec<i32>>, mut new_intervals: Vec<i32>) -> Vec<
 
        result.push(new_intervals.clone());
 
+       for j in i..len{
+           result.push(intervals[j].clone());
+       }
        result
+
 }
 
     //Old Algorithm;
