@@ -1,12 +1,30 @@
-pub fn insert(mut intervals: Vec<Vec<i32>>, new_intervals: Vec<i32>) -> Vec<Vec<i32>> {
+pub fn insert(mut intervals: Vec<Vec<i32>>, mut new_intervals: Vec<i32>) -> Vec<Vec<i32>> {
     let mut  result: Vec<Vec<i32>> = Vec::new();
     let mut i = 0;
     let len = intervals.len();
 
     while i < len && intervals[i][1] < new_intervals[0] {
         result.push(intervals[i].clone());
-        i + 1;
+        i += 1;
     }
+    while i < len && intervals[i][0] <= new_intervals[1] {
+        new_intervals[0] = new_intervals[0].min(intervals[i][0]);
+        new_intervals[1] = new_intervals[0].max(intervals[i][1]);
+        i += 1;
+    }
+
+       result.push(new_intervals.clone());
+
+       result
+}
+
+    //Old Algorithm;
+    // so i check if the start time of the new_intervals is less than the end time of the current interval
+    // and i also check if the end time of the new interval is less than the start time of the next interval
+    // if it satisfies, we push the values to the vector, else, we merge values where they overlap.
+
+
+    // New algorithm:
     // so the correction to the algorithm has changed, we create pointers,
     //that is the starting point of our loop through our intervals, we use
     //a conditional loop to check, while our starting interval is our starting 
@@ -17,11 +35,5 @@ pub fn insert(mut intervals: Vec<Vec<i32>>, new_intervals: Vec<i32>) -> Vec<Vec<
     //the end time of the new interval[1], we reassign the first values of the new interval 
     //by finding the minimum value ofthe current interval start times and we reassign the end times by finding the max of the new interval and the current interval.
 
-    result
-}
-
-    // so i check if the start time of the new_intervals is less than the end time of the current interval
-    // and i also check if the end time of the new interval is less than the start time of the next interval
-    // if it satisfies, we push the values to the vector, else, we merge values where they overlap.
 
 
