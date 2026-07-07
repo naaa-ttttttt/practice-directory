@@ -1,4 +1,4 @@
-pub fn insert(mut intervals: Vec<Vec<i32>>, mut new_intervals: Vec<i32>) -> Vec<Vec<i32>> {
+pub fn insert(intervals: Vec<Vec<i32>>, mut new_intervals: Vec<i32>) -> Vec<Vec<i32>> {
     let mut  result: Vec<Vec<i32>> = Vec::new();
     let mut i = 0;
     let len = intervals.len();
