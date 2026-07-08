@@ -1,12 +1,14 @@
 //mod two_pointers;
-use crate::intervals::insert_intervals::insert;
+use crate::intervals::non_overlapping::non_overlapping_intervals;
 mod intervals;
 
 fn main() {
-    println!("{:?}", insert(vec![
+    println!("{:?}", non_overlapping_intervals(vec![
         vec![1, 3], 
-        vec![6, 9],
-        ], vec![2, 5])
+        vec![5, 8],
+        vec![4, 10],
+        vec![11, 13]
+        ])
         );
     
     println!("Successful");
