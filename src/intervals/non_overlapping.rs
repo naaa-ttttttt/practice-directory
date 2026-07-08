@@ -12,7 +12,5 @@ pub fn non_overlapping_intervals(mut intervals: Vec<Vec<i32>>) -> i32 {
             count += 1;
         }
     }
-
-
     count
 }
