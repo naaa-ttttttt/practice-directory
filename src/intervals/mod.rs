@@ -1,1 +1,1 @@
-pub mod insert_intervals;
+pub mod non_overlapping;
