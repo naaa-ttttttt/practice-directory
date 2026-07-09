@@ -1,1 +1,1 @@
-pub mod non_overlapping;
+pub mod merged_intervals;
