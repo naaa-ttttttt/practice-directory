@@ -1,1 +1,1 @@
-pub mod merged_intervals;
+pub mod employee_free_time;
