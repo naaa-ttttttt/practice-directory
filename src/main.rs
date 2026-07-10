@@ -8,9 +8,9 @@ fn main() {
         vec![3, 5], vec![1, 4]
         ],
         vec![
-        vec![7, 9],
-        vec![6, 8],
-        ]])
+        vec![7, 9], vec![6, 8],
+        ]
+        ])
         );
     
     println!("Successful");
