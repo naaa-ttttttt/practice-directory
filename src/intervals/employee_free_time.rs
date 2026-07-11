@@ -12,7 +12,7 @@ pub fn employee_free_time(schedules: Vec<Vec<Vec<i32>>>) -> Vec<Vec<i32>>{
     let mut merged: Vec<Vec<i32>> = Vec::new();
 
     for overlaps in flattened_intervals {
-        if merged.is_empty() || overlaps[0] < merged.last().unwrap()[1] {
+        if merged.is_empty() || overlaps[0] > merged.last().unwrap()[1] {
             merged.push(overlaps.clone());
         } else {
            let last_id = merged.len() - 1;
