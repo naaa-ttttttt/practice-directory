@@ -20,7 +20,11 @@ pub fn employee_free_time(schedules: Vec<Vec<Vec<i32>>>) -> Vec<Vec<i32>>{
         }
     }
 
-    let mut free_time = Vec::new();
+    let mut free_time: Vec<Vec<i32>> = Vec::new();
 
+    for i in 1..merged.len() {
+        let start =  merged[i - 1][1];
+        let end = merged[i][0];
+    }
     free_time
 }
