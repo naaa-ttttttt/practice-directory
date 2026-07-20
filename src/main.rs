@@ -1,9 +1,9 @@
 //mod two_pointers;
-use crate::stacks::decode_string::decode_strings;
+use crate::stacks::longest_v_substring::longest_v_substring;
 mod stacks;
 
 fn main() {
-    println!("{:?}", decode_strings(String::from("3[a2[c]]")));
+    println!("{:?}", longest_v_substring(String::from("((()()())")));
     
     println!("Successful");
 }
