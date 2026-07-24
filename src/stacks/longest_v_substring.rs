@@ -1,10 +1,13 @@
 pub fn longest_v_substring(s: String) -> i32 {
-    let mut stack: Vec<char> = Vec::new();
-    let count = 0;
+    let mut stack = vec![-1];
+    let mut count = 0;
 
-    for ch in s.chars() {
+    for (i, ch) in s.chars().enumerate() {
         if ch == '(' {
             stack.push(ch);
+        } else if ch == ')' {
+            stack.pop().unwrap();
+            count += 2;
         }
     }
 
