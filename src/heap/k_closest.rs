@@ -7,6 +7,10 @@ pub fn k_closest(x: i32, k: i32, values: Vec<i32>) -> Vec<i32> {
         heap.push((distance.try_into().unwrap(), num));
     }
 
+    if heap.len() > k.try_into().unwrap() {
+        heap.pop();
+    }
+
     let results: Vec<i32> = Vec::new();
 
     results
