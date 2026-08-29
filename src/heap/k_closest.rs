@@ -11,6 +11,10 @@ pub fn k_closest(x: i32, k: i32, values: Vec<i32>) -> Vec<i32> {
         heap.pop();
     }
 
+    for closest in heap {
+        let (dist, val) = closest;
+    }
+
     let results: Vec<i32> = Vec::new();
 
     results
