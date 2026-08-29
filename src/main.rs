@@ -1,9 +1,9 @@
 //mod two_pointers;
-use crate::linked_list::daily_temp::daily_temp;
-mod linked_list;
+use crate::heap::k_closest::k_closest;
+mod heap;
 
 fn main() {
-    println!("{:?}", daily_temp(vec![65, 70, 68, 60, 55, 75, 80, 74]));
+    println!("{:?}", k_closest(1, 3, vec![-1, 0, 1, 4, 6]));
     
     println!("Successful");
 }
